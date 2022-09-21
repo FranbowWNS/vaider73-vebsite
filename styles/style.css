@@ -5,21 +5,31 @@ html{
 body{
     margin: 0;
     background-color: #172B6B;
+    position: relative;
 }
 
+canvas{
+    z-index: 10;
+    position: absolute;
+}
+header{
+    z-index: 20;
+}
 .hedder{
     background-color: black;
     position: absolute;
     left: 0px;
     top: 0px;
+    min-width: 1080px;
     width: 100%;
-    height: 70px;
+    height: 60px;
     margin: 0;
     opacity: 70%;
     overflow-x: scroll;
 
 }
 .body-top{
+    min-width: 1080px;
     background: linear-gradient(rgb(37, 90, 188) 100%, rgba(37,46,188) 0%);
     position: relative;
     aspect-ratio: auto 16 / 9;
@@ -27,6 +37,8 @@ body{
 }
 
 .body-main{
+    z-index: 20;
+    min-width: 1080px;
     position: absolute;
     left: 0;
     right: 0;
@@ -40,3 +52,297 @@ body{
     box-shadow: 0px -30px 75px 4px rgba(0, 0, 0, 0.25);
     border-radius: 40px 40px 0px 0px;
 }
+
+.nav{
+    display: flex;
+    justify-content: center;
+}
+
+
+/* From uiverse.io by @kleenpulse */
+.headerbutton {
+    left: auto;
+    right: auto;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 10px;
+    --border-color: linear-gradient(-45deg, #ffae00, #7e03aa, #00fffb);
+    --border-width: .125em;
+    --curve-size: .5em;
+    --blur: 30px;
+    --bg: #080312;
+    --color: #afffff;
+    color: var(--color);
+      /* use position: relative; so that BG is only for .btn */
+    position: relative;
+    isolation: isolate;
+    display: inline-grid;
+    place-content: center;
+    padding: .5em 1.5em;
+    font-size: 17px;
+    border: 0;
+    text-transform: uppercase;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, .6);
+    clip-path: polygon(
+              /* Top-left */
+              0% var(--curve-size),
+  
+              var(--curve-size) 0,
+              /* top-right */
+              100% 0,
+              100% calc(100% - var(--curve-size)),
+  
+              /* bottom-right 1 */
+              calc(100% - var(--curve-size)) 100%,
+              /* bottom-right 2 */
+              0 100%);
+    transition: color 250ms;
+  }
+  
+  .headerbutton::after,
+  .headerbutton::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+  }
+  
+  .headerbutton::before {
+    background: var(--border-color);
+    background-size: 300% 300%;
+    animation: move-bg7234 5s ease infinite;
+    z-index: -2;
+  }
+  
+  @keyframes move-bg7234 {
+    0% {
+      background-position: 31% 0%
+    }
+  
+    50% {
+      background-position: 70% 100%
+    }
+  
+    100% {
+      background-position: 31% 0%
+    }
+  }
+  
+  .headerbutton::after {
+    background: var(--bg);
+    z-index: -1;
+    clip-path: polygon(
+              /* Top-left */
+              var(--border-width) 
+              calc(var(--curve-size) + var(--border-width) * .5),
+  
+              calc(var(--curve-size) + var(--border-width) * .5) var(--border-width),
+  
+              /* top-right */
+              calc(100% - var(--border-width)) 
+              var(--border-width),
+  
+              calc(100% - var(--border-width)) 
+              calc(100% - calc(var(--curve-size) + var(--border-width) * .5)),
+  
+              /* bottom-right 1 */
+              calc(100% - calc(var(--curve-size) + var(--border-width) * .5)) calc(100% - var(--border-width)),
+              /* bottom-right 2 */
+              var(--border-width) calc(100% - var(--border-width)));
+    transition: clip-path 500ms;
+  }
+  
+  .headerbutton:where(:hover, :focus)::after {
+    clip-path: polygon(
+                  /* Top-left */
+                  calc(100% - var(--border-width)) 
+  
+                  calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
+      
+                  calc(100% - var(--border-width))
+  
+                  var(--border-width),
+      
+                  /* top-right */
+                  calc(100% - var(--border-width))
+  
+                   var(--border-width),
+      
+                  calc(100% - var(--border-width)) 
+  
+                  calc(100% - calc(var(--curve-size) + var(--border-width) * .5)),
+      
+                  /* bottom-right 1 */
+                  calc(100% - calc(var(--curve-size) + var(--border-width) * .5)) 
+                  calc(100% - var(--border-width)),
+  
+                  /* bottom-right 2 */
+                  calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5))
+                  calc(100% - var(--border-width)));
+    transition: 200ms;
+  }
+  
+  .headerbutton:where(:hover, :focus) {
+    color: #fff;
+  }
+
+  /* From uiverse.io by @mrhyddenn */
+/* .scrolldown {
+    z-index: 1000;
+    --color: white;
+    --sizeX: 30px;
+    --sizeY: 50px;
+    position: relative;
+    width: var(--sizeX);
+    height: var(--sizeY);
+    margin-left: var(sizeX / 2);
+    border: calc(var(--sizeX) / 10) solid var(--color);
+    border-radius: 50px;
+    box-sizing: border-box;
+    margin-bottom: 16px;
+    cursor: pointer;
+  }
+  
+  .scrolldown::before {
+    content: "";
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    width: 6px;
+    height: 6px;
+    margin-left: -3px;
+    background-color: var(--color);
+    border-radius: 100%;
+    animation: scrolldown-anim 2s infinite;
+    box-sizing: border-box;
+    box-shadow: 0px -5px 3px 1px #2a547066;
+  }
+  
+  @keyframes scrolldown-anim {
+    0% {
+      opacity: 0;
+      height: 6px;
+    }
+  
+    40% {
+      opacity: 1;
+      height: 10px;
+    }
+  
+    80% {
+      transform: translate(0, 20px);
+      height: 10px;
+      opacity: 0;
+    }
+  
+    100% {
+      height: 3px;
+      opacity: 0;
+    }
+  }
+  
+  .chevrons {
+    z-index: 1000;
+    padding: 6px 0 0 0;
+    margin-left: -3px;
+    margin-top: 48px;
+    width: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .chevrondown {
+    z-index: 1000;
+    margin-top: -6px;
+    position: relative;
+    border: solid var(--color);
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    transform: rotate(45deg);
+  }
+  
+  .chevrondown:nth-child(odd) {
+    animation: pulse54012 500ms ease infinite alternate;
+  }
+  
+  .chevrondown:nth-child(even) {
+    animation: pulse54012 500ms ease infinite alternate 250ms;
+  }
+  
+  @keyframes pulse54012 {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 0.5;
+    }
+  } */
+
+  .stakeline{
+    position: relative;
+    align-self: center;;
+    width: 1311px;
+    height: 500px;
+    left: 50px;
+    top: 25%;
+    border: solid white 2px;
+  }
+
+  .stakeblock{
+    position: relative;
+    width: 400px;
+    height: 390px;
+    background: linear-gradient(129.76deg, #060E95 -0.04%, rgba(7, 5, 142, 0.99) 100%);
+    border-radius: 10px;
+  }
+
+  .stakeblocktopline{
+    border-radius: 10px;
+    z-index: 20;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 400px;
+    height: 70px;
+    background: linear-gradient(180deg, rgba(24, 241, 255, 0.75) , rgba(57, 17, 254, 0.83) );
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    /* filter: blur(1px); */
+  }
+
+  .stakebutton {
+    text-align: center;;
+    position: absolute;
+    top: 300px;
+    left: 50px;
+    width: 300px;
+    height: 50px;
+    color: white;
+    font-size: 2em;
+    border-radius: 0.5em;
+    background: #05078E;
+    border: 1px solid darkblue;
+    transition: all .5s;
+    box-shadow: 6px 6px 12px #040679,
+                -6px -6px 12px #4fade8;
+   }
+   
+   .stakebutton:hover{
+    border: 1px solid white;
+   }
+
+   .stakebutton:active {
+    color: #666;
+    box-shadow: inset 7px 7px 16px #040679,
+                inset -7px -7px 16px #4fade8;
+   }
+
+   .poly-logo{
+    position: absolute;
+    z-index: 30;
+    top: 0Í;
+   }
+
+  

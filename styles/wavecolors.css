@@ -1,5 +1,6 @@
 #gradient-canvas {
     aspect-ratio: auto 16/9;
+    min-width: 1080px;
     height: 100%;
     --gradient-color-1: #255bbc; 
     --gradient-color-2: #c21aff; 
