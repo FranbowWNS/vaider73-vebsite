@@ -405,14 +405,13 @@ footer{
     top: 250px;
     border: solid white 2px
   }
-  #containerTop{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
+  .containerTop{
+    position: flex;
+
+    justify-content: center;
 
     height: 300px;
-    /* width: 100%; */
+    width: 1080px;
 
   }
 
@@ -450,6 +449,8 @@ footer{
     border-radius: 45px;
     background-color: rgba(255, 255, 255, 0.4);
   }
+
+  
 
   /* .rightArrow{
     position: relative;
