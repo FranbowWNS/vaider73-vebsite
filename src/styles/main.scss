@@ -1,0 +1,16 @@
+@import "header";
+@import "bodyHeadpart";
+@import "bodyMiddlepart";
+@import "bodyFootpart";
+@import "footer";
+
+body{
+    margin: 0;
+    background-color: #0b3383;
+  }
+  
+  html{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }

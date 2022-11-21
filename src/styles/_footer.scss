@@ -1,0 +1,119 @@
+.footer{
+    height: 340px;
+    background: rgba(24, 43, 111, 1);
+  
+    display: flex;
+      flex-direction: column;
+      align-content: center;
+      align-items: center;
+    
+  }
+  
+  .footertop{
+    width: 670px;
+    height: 60px;
+  
+    font-family: 'Londrina Solid', sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  
+  .footertop a{
+    color: white !important;
+    text-decoration: none;
+    font-size: 32px;
+  }
+  
+  .footerwrap{
+    min-width: 1110px;
+    height: 220px;
+    border: 1px solid transparent;
+  
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  
+  }
+  
+  .logoholder{
+    width: 220px;
+    height: 220px;
+    border: 1px solid transparent;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .logocircle{
+    width: 135px;
+    height: 135px;
+  
+    border-radius: 90px;
+  
+    border: 1px solid #fff;
+  }
+  
+  .central{
+    width: 670px;
+    height: 220px;
+    border-width: 2px 2px 0px 2px;
+    border-style: solid;
+    border-color: #fff;
+  
+    display: flex;
+      flex-direction: column;
+      align-content: center;
+      justify-content: flex-end;
+      align-items: center;
+  }
+  
+  //   SM - social media
+  .SMCircles-wrap{
+    height: 40px;
+    width: 264px;
+    border: 1px solid transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  
+
+  .SMCircle{
+    width: 40px;
+    height: 40px;
+    border-radius: 90px;
+    display: flex;
+    border: 1px solid transparent;
+    background-color: #bbb;
+  }
+  
+  .central p{
+    color: white;
+    font-family: 'Londrina Solid', sans-serif ;
+    font-size: 15px;
+    font-weight: 100;
+    margin: 0;
+  }
+  
+  .contactholder{
+    width: 220px;
+    height: 220px;
+    border: 1px solid #fff;
+  
+    display: flex;
+  }
+  
+  
+  
+  .futerLeftLink{
+    margin-left: 10px;
+  }
+  
+  .futerRightLink{
+    margin-right: 10px;
+    cursor: default;
+  }

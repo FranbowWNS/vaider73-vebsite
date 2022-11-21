@@ -1,0 +1,12 @@
+{
+    "name": "vaider73-package",
+    "version": "1.0.0",
+    "author": "Yurii <franbow.work@gmail.com>",
+    "scripts": {
+        "watch:scss": "node-sass -w src/styles/main.scss src/styles/style.css"
+    },
+    
+    "dependencies": {
+        "node-sass": "^8.0.0"
+    }
+}

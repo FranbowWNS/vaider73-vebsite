@@ -1,0 +1,49 @@
+.comSoon{
+    color: rgb(255, 249, 249);
+    font-size: 40px;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    font-family: 'Space Grotsek', 'Roboto', sans-serif;
+  
+    margin-bottom: 5px;
+  }
+  
+  .comingsoonContent{
+    min-width: 1200px;
+    border: 1px solid #fff;
+  
+    display: flex;
+      flex-direction: row;
+      align-content: center;
+      justify-content: space-around;
+      align-items: center;
+  }
+  
+  .leftButtonHolder{
+    display: flex;
+  
+    width: 65px;
+    height: 350px;
+  
+    border: 1px solid #fff;
+    margin-left: 5px;
+  }
+  
+  .carouselHolder{
+  display: flex;
+  
+    width: 700px;
+    height: 350px;
+  
+    border: 1px solid #fff;
+  }
+  
+  .rightButtonHolder{
+    display: flex;
+  
+    width: 65px;
+    height: 350px;
+  
+    border: 1px solid #fff;
+    margin-right: 5px;
+  }

@@ -1,0 +1,17 @@
+@import "availableStakes";
+
+.bodyTop{
+    height: 600px;
+    margin : -20px;
+    
+    background: linear-gradient(180deg, #1B3E82 0%, #182B6F 100%);
+    box-shadow: inset 0px -35px 60px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 50px 50px 0 0;
+  
+    text-align: center;
+    padding-top: 15px;
+  }
+  
+  .bodyTop h1{
+    margin: 0;
+  }
