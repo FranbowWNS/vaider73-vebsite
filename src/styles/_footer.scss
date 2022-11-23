@@ -1,3 +1,5 @@
+
+
 .footer{
     height: 340px;
     background: rgba(24, 43, 111, 1);
@@ -7,13 +9,14 @@
       align-content: center;
       align-items: center;
     
+      overflow-x: hidden;;
   }
   
   .footertop{
     width: 670px;
     height: 60px;
   
-    font-family: 'Londrina Solid', sans-serif;
+    font-family: 'Londrina Solid', sans-serif !important;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -106,14 +109,37 @@
   
     display: flex;
   }
-  
-  
-  
-  .futerLeftLink{
-    margin-left: 10px;
-  }
-  
-  .futerRightLink{
-    margin-right: 10px;
-    cursor: default;
-  }
+
+  .dropdown{
+    background-color: none !important;
+}
+.btn-secondary{
+    background:none !important;
+    border:none !important;
+    margin:0 !important;
+    padding: 0 !important;;
+    cursor: pointer !important;
+
+    font-size: 25px;
+}
+
+.btn-secondary:hover{
+  color: #00F0FF !important;
+}
+
+.dropdown-menu{
+  background-color: #182a6f !important;
+
+  font-size: 20px;
+
+  width: 670px;
+  height: 220px;
+}
+
+.dropdown-item{
+  font-size: 20px !important;
+}
+
+.btn-secondary.toggle{
+  border: none !important;
+}

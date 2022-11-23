@@ -15,20 +15,32 @@
     display: inline-block;
   }
   
+  .availableModule{
+    min-width: 500px;
+    display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content:center;
+
+    margin: 10px 10px;
+  }
+
   .stakeline{
-    min-width: 1230px;
-    min-height: 480px;
+    min-width: 500px;
     border: 1px solid white;
     
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    padding: 10px 10px;
   }
   
   .infoblock{
-    width: 750px;
-    height: 480px;
+    min-width: 300px;
+    width: 300px;
+    height: 320px;
   
     border: white solid 1px;
     display: flex;
@@ -39,14 +51,17 @@
     color: white;
     text-align: left;
     font-size: 20px;
+
+    padding-left: 10px;
   
   
   }
   
   
   .stakeblock{
-    width: 480px;
-    height: 480px;
+    min-width: 300px;
+    width: 300px;
+    height: 320px;
   
   
     background: linear-gradient(129.76deg, #060E95 -0.04%, rgba(5, 7, 142, 0.99) 100%);
@@ -58,8 +73,8 @@
   }
   
   .stakeblockline{
-    width: 480px;
-    height: 100px;
+    width: 300px;
+    height: 70px;
     background-color: #00F0FF;
   
     display: flex;
@@ -69,14 +84,14 @@
   .stakebutton {
     text-align: center;
     font-family: 'Space Grotsek', 'Roboto', sans-serif;
-    width: 300px;
+    width: 150px;
     height: 50px;
     color: white;
     font-family: 'Roboto', sans-serif;
     cursor: pointer;
   
-    margin-left: 90px;
-    margin-bottom: 50px;
+    margin-left: 75px;
+    margin-bottom: 40px;
   
   
     font-size: 20px;
